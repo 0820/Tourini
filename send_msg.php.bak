@@ -1,0 +1,37 @@
+<?php include ( "./inc/header.inc.php" ); ?>
+<div id="body_wrapper">
+<?php
+if (isset($_GET['u'])) {
+	$username = mysql_real_escape_string($_GET['u']);
+	if (ctype_alnum($username)) {
+		//check user exists
+		$check = mysql_query("SELECT username FROM user WHERE username='$username'");
+		$get = mysql_fetch_assoc($check);
+		$username = $get['username'];
+
+		//Check user isn't sending themself a private message
+		if ($username != $user) {
+			if (isset($_POST['submit'])) {
+				$msg_body = @$_POST['msg_body'];
+				$time = date("Y/m/d h:i:sa");
+
+				$send_msg = mysql_query("INSERT INTO message VALUES ('',(SELECT my_id FROM user WHERE username='$username'),(SELECT my_id FROM user WHERE username='$user'),'','$msg_body','$time','','')");
+				echo "Your message has been sent ...";
+			}
+			echo "
+			<form action='send_msg.php?u=$username' method='POST'>
+			<h2>Compose a Message to $username : </h2>
+			<textarea cols='50' rows='12' name='msg_body'>Enter the message ...</textarea>
+			<br />
+			<input type='submit' name='submit' value='Send Message'></input>
+			</form>
+			";
+		}
+		else {
+			header("Location: $user");
+		}
+	}
+}
+?>
+</div>
+<?php include ( "./inc/footer.inc.php" ); ?>

@@ -1,0 +1,305 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	background-color: #EFF5F9;
+}
+h1 {
+	font-size: 28px;
+	padding: 8px;
+	color: #0084c6;
+}
+h2 {
+	font-size: 18px;
+	padding: 8px;
+	color: #0084c6;
+}
+input[type="text"] {
+	background-color: #FFFFFF;
+	border: 1px solid #e2e2e2;
+	font-size: 15px;
+	padding: 5px;
+	width: 300px;
+	margin-bottom: 3px;
+	margin-top: 3px;
+	outline: none;
+}
+input[type="text"]:hover {
+	border: 1px solid #006fc4;
+}
+input[type="submit"] {
+	background-color: #006fc4;
+	border: 1px solid #00508d;
+	font-size: 15px;
+	color: #fff;
+	padding: 5px;
+	margin-bottom: 3px;
+	margin-top: 3px;
+	border-radius: 7px;
+}
+.headerMenu {
+	background-image: url(../img/menu_bg.png);
+	height: 56px;
+	border-bottom: 0;
+	padding-left: auto;
+	padding-right: auto;
+	width: 100%;
+}
+#wrapper {
+	background-image: url(../img/menu_bg.png);
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+#body_wrapper {
+	width: 55%;
+	margin: auto;
+	padding: 10px;
+}
+#body_wrapper textarea {
+	margin: 15px 0 5px 10px;
+}
+#body_wrapper a:link {
+	color: #00527f;
+	background-color: #d9e8f3;
+}
+.logo {
+	background-image: url(../img/menu_bg.png);
+	width: 125px;
+}
+.logo img {
+	background-image: url(../img/menu_bg.png);
+	width: 122px;
+	height: 47px;
+	padding-top: 7px;
+}
+.search_box {
+	background-image: url(../img/menu_bg.png);
+	position: absolute;
+	top: 11px;
+	margin-left: 155px;
+}
+#search input[type="text"] {
+	background: url(../img/search-white.png) no-repeat 10px 10px #ffffcc;
+	outline: none;
+	border: 0 none;
+	font: bold 12px Arial,Helvetica,Sans-serif;
+	width: 350px;
+	padding: 11px 15px 10px 35px;
+	margin: 0;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+	-webkit-transition: all 0.7s ease 0s;
+	-moz-transition: all 0.7s ease 0s;
+	-o-transition: all 0.7s ease 0s;
+	transition: all 0.7s ease 0s;
+}
+#search input[type="text"]:focus {
+	background: url(../img/search-icon.png) no-repeat 10px 10px #fcfcfc;
+	color: #6a6f75;
+	width: 350px;
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+	text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+#gallery {
+	width: 950px;
+	height: 562px;
+	margin: 0 auto;
+	position: relative;
+	background: #f8f8f8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+#gallery #fullsize {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 562px;
+	width: 950px;
+	overflow: hidden;
+	text-align: center;
+}
+#gallery #fullsize div {
+	width: 950px;
+	height: 700px;
+	padding-top: 20px;
+	position: relative;
+}
+#gallery #fullsize div img {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+	border: 10px solid #fff;
+	width: 600px;
+	height: 400px;
+	position: relative;
+	z-index: 500;
+}
+#gallery #fullsize a.previous {
+	display: block;
+	height: 120px;
+	width: 180px;
+	position: absolute;
+	left: 10px;
+	top: 200px;
+	z-index: 10;
+	border: 10px solid #fff;
+}
+#gallery #fullsize a.next {
+	display: block;
+	height: 120px;
+	width: 180px;
+	position: absolute;
+	right: 10px;
+	top: 200px;
+	z-index: 10;
+	border: 10px solid #fff;
+}
+#gallery #fullsize a.next img, #gallery #fullsize a.previous img {
+	display: block;
+	height: 120px;
+	width: 180px;
+	border: 0;
+	opacity: 0.4;
+}
+#gallery #fullsize a:hover {
+	direction: ltr;
+	z-index: 600;
+}
+#gallery #fullsize a:hover img {
+	opacity: 0.8;
+}
+.table_unit {
+	padding: 20px 35px;
+	margin: 5px;
+	border-style: groove;
+	border-color: #eff5f9;
+}
+@media screen and (max-width: 1280px) {
+#menu {
+	background-image: url(../img/menu_bg_short.png);
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 37px;
+	padding-top: 9px;
+	margin-right: 4%;
+}
+}
+@media screen and (min-width: 1280px) {
+#menu {
+	background-image: url(../img/menu_bg_short.png);
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 37px;
+	padding-top: 9px;
+	margin-right: 6%;
+}
+}
+@media screen and (min-width: 1280px) {
+#menu {
+	background-image: url(../img/menu_bg_short.png);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 37px;
+	padding-top: 9px;
+	margin-right: 10%;
+}
+}
+@media screen and (min-width: 1920px) {
+#menu {
+	background-image: url(../img/menu_bg_short.png);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 37px;
+	padding-top: 9px;
+	margin-right: 17%;
+}
+}
+#menu a {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+	background-image: url(../img/menu_bg.png);
+	background-repeat: no-repeat;
+	padding-top: 19px;
+	padding-bottom: 22px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#menu a:hover {
+	background-image: url(../img/menu_bg_mouse_hover.png);
+}
+#wrapper_profile {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1024px;
+	height: auto;
+	border-left: 1px solid #dce5ee;
+	border-right: 1px solid #dce5ee;
+	padding: 0 10px;
+}
+.textHeader {
+	background-color: #f6cccc;
+	width: 200px;
+	height: 25px;
+	padding: 5px;
+	border-bottom: 1px solid #dce5ee;
+	font-weight: 600;
+}
+.profileLeftSideContent {
+	width: 244px;
+	padding: 5px 0px;
+	height: 200px;
+	text-align: justify;
+}
+.postForm {
+	float: right;
+	width: 560px;
+	height: 80px;
+	background-color: #f3f6f9;
+	padding: 5px;
+}
+.postForm input[type="submit"] {
+	background-color: #dce5ee;
+	float: right;
+	border: 1px solid #666;
+	color: #666;
+}
+.profilePosts {
+	float: right;
+	width: 560px;
+	height: 414px;
+	background-color: #fff;
+	padding: 5px;
+	text-align: justify;
+}
+.profilePosts hr {
+	background-color: #dce5ee;
+	height: 3px;
+	border: 0px;
+}
+.posted_by {
+	font-weight: 800;
+	color: #000;
+	float: none;
+}
+.posted_by a {
+	font-weight: 800;
+	color: #000;
+	text-decoration: none;
+}
+.posted_by a:hover {
+	text-decoration: underline;
+}
